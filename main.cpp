@@ -12,7 +12,7 @@ float x, y;
 int speed_x, speed_y;
 int radius;
 void Draw(){
-        DrawCircle (x,y, radius, WHITE);
+        DrawCircle (x,y, radius, ORANGE);
     }
     void Update(){ //Let's create an update object
             x+=speed_x;
@@ -55,7 +55,7 @@ class Paddle{
     int speed;
 
     void Draw(){
-        DrawRectangle (x, y,width, height,WHITE);
+        DrawRectangle (x, y,width, height,ORANGE);
     }
     void Update(){
         if(IsKeyDown(KEY_UP)){
