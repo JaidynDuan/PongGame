@@ -112,6 +112,9 @@ int main () {
 
     while (WindowShouldClose()==false){ //WindowShouldClose is a function
         //Update the poitions of the game objects
+        if (player_score>7||cpu_score<7){
+            break;
+        }
         BeginDrawing();
         ball.Update();
         player.Update();
@@ -134,9 +137,7 @@ int main () {
          DrawText(TextFormat("%i",player_score), 3*screen_width/4-20, 20, 80, WHITE);
         EndDrawing();
         //Check for collisions at the end
-    if(player_score>=15||cpu_score>=15){
-        break;
-    }
+    
     }
     CloseWindow();
 
